@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Chat with Langflow</h1>
+      <h1>Chat with AI powered by LangFlow DataStax</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
