@@ -13,7 +13,7 @@ app.post('/api/message', (req, res) => {
     return res.status(400).send({ error: 'Message is required' });
   }
 
-  const command = `node server/scripts/chal.js "${userMessage}" "chat" "chat" false`;
+  const command = `node scripts/chal.js "${userMessage}" "chat" "chat" false`;
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
