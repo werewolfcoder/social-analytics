@@ -14,7 +14,7 @@ function App() {
     setResponseMessage('');
 
     try {
-      const { data } = await axios.post('http://localhost:4000/api/message', {
+      const { data } = await axios.post('https://social-analytics-ueun.onrender.com/api/message', {
         message: userMessage,
       });
 
