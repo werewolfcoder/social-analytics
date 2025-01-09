@@ -8,6 +8,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    document.getElementsByTagName('h1')[0].style.display = 'none';
     if (!userMessage.trim()) return;
 
     setIsLoading(true);
@@ -30,7 +31,7 @@ function App() {
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
       <h1>Chat with AI powered by LangFlow DataStax</h1>
-      <form onSubmit={handleSubmit}>
+      <form style={{position:'fixed'}} onSubmit={handleSubmit}>
         <input
           type="text"
           value={userMessage}
@@ -42,6 +43,7 @@ function App() {
           Send
         </button>
       </form>
+
       {isLoading && <p>Loading...</p>}
       {responseMessage && (
         <div style={{ marginTop: '1rem', border: '1px solid #ddd', padding: '1rem', borderRadius:'20px'}}>
