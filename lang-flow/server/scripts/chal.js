@@ -1,5 +1,4 @@
 // Note: Replace *<YOUR_APPLICATION_TOKEN>* with your actual Application token
-
 class LangflowClient {
     constructor(baseURL, applicationToken) {
         this.baseURL = baseURL;
@@ -72,9 +71,9 @@ class LangflowClient {
 }
 
 async function main(inputValue, inputType = 'chat', outputType = 'chat', stream = false) {
-    const flowIdOrName = 'beea0b4e-b3b1-4d15-9c30-3d51dedcdc21';
-    const langflowId = '9f68d467-5037-4a47-808a-cb67ed197aea';
-    const applicationToken = 'AstraCS:bAiUZLKCsFSocImPShEClqRg:132020f930bdd6723d71247943039c732fe494f64ab0b2a2104c13a1fb0ba990';
+    const flowIdOrName = import.meta.env.FLOWID;
+    const langflowId = import.meta.env.LANGFLOW_ID;
+    const applicationToken = import.meta.env.APPLICATION_TOKEN;
     const langflowClient = new LangflowClient('https://api.langflow.astra.datastax.com',
         applicationToken);
 
@@ -124,7 +123,7 @@ async function main(inputValue, inputType = 'chat', outputType = 'chat', stream 
     "user_question": ""
   },
   "GoogleGenerativeAIModel-9n1G0": {
-    "google_api_key": "AIzaSyAGPxZbKpwX2yV_Dc66fWqE6bPn9cijh1c",
+    "google_api_key": import.meta.env.GOOGLE_API_KEY,
     "input_value": "",
     "max_output_tokens": null,
     "model": "gemini-1.5-flash-8b",
