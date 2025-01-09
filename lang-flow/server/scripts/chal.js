@@ -71,9 +71,9 @@ class LangflowClient {
 }
 
 async function main(inputValue, inputType = 'chat', outputType = 'chat', stream = false) {
-    const flowIdOrName = process.env.FLOWID;
-    const langflowId = process.env.LANGFLOW_ID;
-    const applicationToken = process.env.APPLICATION_TOKEN;
+    const flowIdOrName = 'beea0b4e-b3b1-4d15-9c30-3d51dedcdc21';
+    const langflowId = '9f68d467-5037-4a47-808a-cb67ed197aea';
+    const applicationToken = 'AstraCS:GlhwsfCyyYBINrefJoygpzOP:189b047362a4a9cec6b89cf5209c68504893961597824995c49a1d8479f014e4';
     const langflowClient = new LangflowClient('https://api.langflow.astra.datastax.com',
         applicationToken);
 
@@ -123,7 +123,7 @@ async function main(inputValue, inputType = 'chat', outputType = 'chat', stream 
     "user_question": ""
   },
   "GoogleGenerativeAIModel-9n1G0": {
-    "google_api_key": process.env.GOOGLE_API_KEY,
+    "google_api_key":'AIzaSyAGPxZbKpwX2yV_Dc66fWqE6bPn9cijh1c',
     "input_value": "",
     "max_output_tokens": null,
     "model": "gemini-1.5-flash-8b",
