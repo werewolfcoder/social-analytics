@@ -81,7 +81,6 @@ function App() {
         ))}
       {isLoading && <p style={{ textAlign: 'center', marginTop: '10px' }}>Loading...</p>}
       </div>
-      
       <form
         style={{
           position: 'absolute',
